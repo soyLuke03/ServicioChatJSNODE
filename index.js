@@ -37,6 +37,6 @@ io.on('connection', function(socket) {
 
 
 
-serverHttp.listen(3000, () => {
-    console.log(`Server running on port ${3000}`)
+serverHttp.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 })
