@@ -2,6 +2,7 @@
 
 const app = require('express')()
 const serverHttp = require('http').Server(app)
+const PORT = 3000
 const io = require('socket.io')(serverHttp)
 
 const myMessages = [];
