@@ -2,6 +2,7 @@
 
 const app = require('express')()
 const serverHttp = require('http').Server(app)
+const port = 3000
 const io = require('socket.io')(serverHttp)
 
 const myMessages = [];
@@ -36,6 +37,6 @@ io.on('connection', function(socket) {
 
 
 
-serverHttp.listen(3000, () => {
-    console.log(`Server running on port ${3000}`)
+serverHttp.listen(process.env.PORT || 3000, () => {
+    console.log(`Server running on port ${port}`)
 })
